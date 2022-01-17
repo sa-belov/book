@@ -1,26 +1,45 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
+    "module": "esNext",
+    "allowJs": false,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "baseUrl": "./src"
   },
   "include": [
     "src"
-  ]
+  ],
+  "paths": {
+    "components/*": ["components/*"],
+    "constants/*": ["constants/*"],
+    "helpers/*": ["helpers/*"],
+    "pages/*": ["pages/*"],
+    "slices/*": ["slices/*"],
+    "selectors/*": ["selectors/*"],
+    "router/*": ["router/*"],
+    "services/*": ["services/*"],
+    "shared/*": ["shared/*"],
+    "styles/*": ["styles/*"],
+    "types/*": ["types/*"],
+    "settings/*": ["settings/*"],
+    "assets/*": ["assets/*"]
+  }
 }
