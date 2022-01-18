@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import bookReducer from '../pages/BookPage/book.reducer';
+import { combineReducers, createStore } from 'redux';
+import bookPageReducer from '../pages/BookPage/book.reducer';
 
-const store = configureStore({
-  reducer: {
-    book: bookReducer,
-  },
+const reducer = combineReducers({
+  book: bookPageReducer,
 });
+
+const store = createStore(reducer);
 
 export default store;
